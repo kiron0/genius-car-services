@@ -12,9 +12,9 @@ import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const Register = () => {
   const [agree, setAgree] = useState(false);
-  const [createUserWithEmailAndPassword, user, loading, error] =
+  const [createUserWithEmailAndPassword, user, loading] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+  const [updateProfile, updating] = useUpdateProfile(auth);
 
   const navigate = useNavigate();
 
