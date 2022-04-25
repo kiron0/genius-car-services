@@ -51,7 +51,7 @@ const Header = () => {
                   className="btn btn-link text-white text-decoration-none"
                   onClick={handleSignOut}
                 >
-                  sign out
+                  Sign Out
                 </button>
               ) : (
                 <Nav.Link as={Link} to="login">
