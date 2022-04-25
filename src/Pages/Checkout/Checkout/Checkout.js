@@ -1,13 +1,11 @@
-import React from "react";
-import PageTitle from "../../Shared/PageTitle/PageTitle";
+import React from 'react';
 
 const Checkout = () => {
-  return (
-    <div>
-      <PageTitle title="Checkout"></PageTitle>
-      <h2>Please Checkout your booking</h2>
-    </div>
-  );
+    return (
+        <div>
+            <h2>Please Checkout your booking</h2>
+        </div>
+    );
 };
 
 export default Checkout;

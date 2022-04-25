@@ -20,7 +20,8 @@ const Header = () => {
         expand="lg"
         sticky="top"
         bg="primary"
-        variant="dark" className="py-3"
+        variant="dark"
+        className="py-3"
       >
         <Container>
           <Navbar.Brand as={Link} to="/">
@@ -31,21 +32,29 @@ const Header = () => {
             id="responsive-navbar-nav"
             className="justify-content-end"
           >
-            <Nav className="ms-auto">
-              <Nav.Link href="/">Services</Nav.Link>
-              <Nav.Link href="/">Experts</Nav.Link>
-              <Nav.Link as={Link} to="/about">
+            <Nav>
+              <Nav.Link as={Link} to="about">
                 About
               </Nav.Link>
+              {user && (
+                <>
+                  <Nav.Link as={Link} to="addservice">
+                    Add
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="manage">
+                    Manage
+                  </Nav.Link>
+                </>
+              )}
               {user ? (
                 <button
                   className="btn btn-link text-white text-decoration-none"
                   onClick={handleSignOut}
                 >
-                  Log Out
+                  sign out
                 </button>
               ) : (
-                <Nav.Link as={Link} to="/login">
+                <Nav.Link as={Link} to="login">
                   Login
                 </Nav.Link>
               )}
