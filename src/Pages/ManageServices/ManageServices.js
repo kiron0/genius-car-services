@@ -13,7 +13,6 @@ const ManageServices = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           const remaining = services.filter((service) => service._id !== id);
           setServices(remaining);
         });
